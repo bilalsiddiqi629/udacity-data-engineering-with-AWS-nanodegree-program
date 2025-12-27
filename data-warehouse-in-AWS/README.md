@@ -1,0 +1,5 @@
+## The Purpose of This Database:
+###### The purpose of this database is to allow analysts to make predictions and judgements based on user data. The databases include a variety of information, such as the user subscription level, the region they are listening from, and the artist they were listening to as well. With this information, it's possible to observe trends in user activity and adjust the software based on these trends.
+
+## Database schema design and ETL pipeline:
+###### Firstly, the database contains seperate tables for the user, songs, artists, and the time of listening. From there, there is a table called songplay. This table joins together information from the user, song, and artist tables in order to give a clear demonstration of what the user is listening to, from where they're listening, and what they were listening to as well. The ETL pipeline works by first retrieving the data from S3 buckets, transforming it into usable data via Redshift clusters, and then finally loading them into tables with SQL statements.
